@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="A website for recycling and collecting scraps" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>RECYCLER | GREENCYCLING</title>
+
+		
+
+		<link rel="modulepreload" href="/bundle/start-7925f28f.js">
+		<link rel="modulepreload" href="/bundle/chunks/vendor-31c8eaa5.js">
+		<link rel="modulepreload" href="/bundle/pages/__layout.svelte-7840959c.js">
+		<link rel="modulepreload" href="/bundle/pages/seller/__layout.svelte-a772f3ec.js">
+		<link rel="modulepreload" href="/bundle/pages/seller/index.svelte-b7973ef4.js">
+		<link rel="stylesheet" href="/bundle/assets/start-464e9d0a.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/__layout.svelte-df7417d7.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/seller/__layout.svelte-210c3911.css">
+
+		<script type="module">
+			import { start } from "/bundle/start-7925f28f.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/bundle/pages/__layout.svelte-7840959c.js"),
+						import("/bundle/pages/seller/__layout.svelte-a772f3ec.js"),
+						import("/bundle/pages/seller/index.svelte-b7973ef4.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Fseller",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+
+
+<nav class="fixed bg-white flex h-min justify-between md:justify-start md:flex-col md:h-screen md:w-96 w-screen"><div class="flex justify-center items-center overflow-hidden"><a sveltekit:prefetch href="/" class="md:text-2xl font-semibold mx-4 md:p-6 md:mb-4">GREENCYCLING</a></div>
+
+    <div class="flex md:flex-col md:space-y-4"><a sveltekit:prefetch href="/seller" class="p-4 md:mx-6 md:rounded-md hover:bg-blue-200 svelte-1ven3eg active">SUMMARY</a>
+        <a sveltekit:prefetch href="/seller/bin-locations" class="p-4 md:rounded-md md:mx-6 hover:bg-blue-200 svelte-1ven3eg">BIN LOCATIONS</a><a sveltekit:prefetch href="/seller/exchange" class="p-4 md:rounded-md md:mx-6 hover:bg-blue-200 svelte-1ven3eg">EXCHANGE</a></div></nav>
+<div class="bg-gray-200 min-h-screen h-full md:ml-96 px-10 md:py-10 py-24"><div><div class="flex md:flex-row flex-col md:space-x-10 overflow-auto scroll"><div class="flex md:flex-col flex-row items-center bg-white rounded-xl p-8 auto md:w-64 md:h-56 md:mt-24 mt-4 flex-shrink-0 space-x-4 md:space-x-0"><div class="rounded-xl w-24 h-24 md:mx-auto p-7 bg-green-400 md:-mt-20"><img src="/img/icons/award-solid.svg" alt="logo for Points" class=""></div>
+    <div class="flex md:flex-col items-center justify-between flex-grow md:flex-grow-0"><p class="text-lg font-semibold md:mt-8 text-white p-2 rounded-md bg-green-600 hover:bg-green-800">view
+        </p>
+        <p class="text-lg font-medium md:mt-4">Points</p></div></div>
+
+<div class="m-0 fixed inset-0 flex justify-center items-center z-10 rounded-2xl hidden"><div class="fixed inset-0 bg-black bg-opacity-80"></div>
+    <div class="bg-white z-20 p-7 w-5/12 rounded-xl"><h3 class="font-xl font-bold">Points</h3>
+        <div class="flex space-x-3 mt-3 items-center"><select class="p-2 rounded-md bg-white border-2 border-gray-300"><option value="0">Today</option><option value="1">This week</option><option value="2">This month</option><option value="3">This year</option><option value="4">All time</option></select>
+            <div>0</div></div>
+        <div class="mt-4 h-56 rounded-xl bg-white p-7"><canvas height="224px"></canvas></div></div></div>
+    <div class="flex md:flex-col flex-row items-center bg-white rounded-xl p-8 auto md:w-64 md:h-56 md:mt-24 mt-4 flex-shrink-0 space-x-4 md:space-x-0"><div class="rounded-xl w-24 h-24 md:mx-auto p-7 bg-green-400 md:-mt-20"><img src="/img/icons/trash-solid.svg" alt="logo for Recycled" class=""></div>
+    <div class="flex md:flex-col items-center justify-between flex-grow md:flex-grow-0"><p class="text-lg font-semibold md:mt-8 text-white p-2 rounded-md bg-green-600 hover:bg-green-800">view
+        </p>
+        <p class="text-lg font-medium md:mt-4">Recycled</p></div></div>
+
+<div class="m-0 fixed inset-0 flex justify-center items-center z-10 rounded-2xl hidden"><div class="fixed inset-0 bg-black bg-opacity-80"></div>
+    <div class="bg-white z-20 p-7 w-5/12 rounded-xl"><h3 class="font-xl font-bold">Recycled</h3>
+        <div class="flex space-x-3 mt-3 items-center"><select class="p-2 rounded-md bg-white border-2 border-gray-300"><option value="0">Today</option><option value="1">This week</option><option value="2">This month</option><option value="3">This year</option><option value="4">All time</option></select>
+            <div>0 KG</div></div>
+        <div class="mt-4 h-56 rounded-xl bg-white p-7"><canvas height="224px"></canvas></div></div></div>
+    <div class="flex md:flex-col flex-row items-center bg-white rounded-xl p-8 auto md:w-64 md:h-56 md:mt-24 mt-4 flex-shrink-0 space-x-4 md:space-x-0"><div class="rounded-xl w-24 h-24 md:mx-auto p-7 bg-green-400 md:-mt-20"><img src="/img/icons/redeem-solid.svg" alt="logo for Redeemed" class=""></div>
+    <div class="flex md:flex-col items-center justify-between flex-grow md:flex-grow-0"><p class="text-lg font-semibold md:mt-8 text-white p-2 rounded-md bg-green-600 hover:bg-green-800">view
+        </p>
+        <p class="text-lg font-medium md:mt-4">Redeemed</p></div></div>
+
+<div class="m-0 fixed inset-0 flex justify-center items-center z-10 rounded-2xl hidden"><div class="fixed inset-0 bg-black bg-opacity-80"></div>
+    <div class="bg-white z-20 p-7 w-5/12 rounded-xl"><h3 class="font-xl font-bold">Redeemed</h3>
+        <div class="flex space-x-3 mt-3 items-center"><select class="p-2 rounded-md bg-white border-2 border-gray-300"><option value="0">Today</option><option value="1">This week</option><option value="2">This month</option><option value="3">This year</option><option value="4">All time</option></select>
+            <div>$0</div></div>
+        <div class="mt-4 h-56 rounded-xl bg-white p-7"><canvas height="224px"></canvas></div></div></div>
+    <div class="flex md:flex-col flex-row items-center bg-white rounded-xl p-8 auto md:w-64 md:h-56 md:mt-24 mt-4 flex-shrink-0 space-x-4 md:space-x-0"><div class="rounded-xl w-24 h-24 md:mx-auto p-7 bg-green-400 md:-mt-20"><img src="/img/icons/heart-solid.svg" alt="logo for Donated" class=""></div>
+    <div class="flex md:flex-col items-center justify-between flex-grow md:flex-grow-0"><p class="text-lg font-semibold md:mt-8 text-white p-2 rounded-md bg-green-600 hover:bg-green-800">view
+        </p>
+        <p class="text-lg font-medium md:mt-4">Donated</p></div></div>
+
+<div class="m-0 fixed inset-0 flex justify-center items-center z-10 rounded-2xl hidden"><div class="fixed inset-0 bg-black bg-opacity-80"></div>
+    <div class="bg-white z-20 p-7 w-5/12 rounded-xl"><h3 class="font-xl font-bold">Donated</h3>
+        <div class="flex space-x-3 mt-3 items-center"><select class="p-2 rounded-md bg-white border-2 border-gray-300"><option value="0">Today</option><option value="1">This week</option><option value="2">This month</option><option value="3">This year</option><option value="4">All time</option></select>
+            <div>$0</div></div>
+        <div class="mt-4 h-56 rounded-xl bg-white p-7"><canvas height="224px"></canvas></div></div></div></div>
+<h1 class="text-2xl font-bold mt-10">Activity log</h1>
+<div class="space-y-10 rounded-xl mt-4 px-11 relative" style="max-width: 1144px;"><div class="bg-gray-400 w-3 rounded-2xl absolute inset-y-0 left-14"></div>
+    <div class="flex items-center space-x-7"><div class="w-9 h-9 bg-yellow-600 rounded-full relative"></div>
+    <div class="h-24 bg-white flex-grow rounded-lg flex justify-between items-center px-5"><p class="text-2xl font-medium">Donated $10 to Change Vietnam</p>
+        <p>3 days ago</p></div></div>
+    <div class="flex items-center space-x-7"><div class="w-9 h-9 bg-yellow-600 rounded-full relative"></div>
+    <div class="h-24 bg-white flex-grow rounded-lg flex justify-between items-center px-5"><p class="text-2xl font-medium">Redeemed $5</p>
+        <p>5 days ago</p></div></div>
+    <div class="flex items-center space-x-7"><div class="w-9 h-9 bg-yellow-600 rounded-full relative"></div>
+    <div class="h-24 bg-white flex-grow rounded-lg flex justify-between items-center px-5"><p class="text-2xl font-medium">Donated $15 to WWF</p>
+        <p>10 days ago</p></div></div></div></div>
+</div>
+
+
+
+			
+		</div>
+	</body>
+</html>

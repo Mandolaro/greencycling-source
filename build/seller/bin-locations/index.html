@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="A website for recycling and collecting scraps" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>RECYCLER | GREENCYCLING</title>
+
+		
+
+		<link rel="modulepreload" href="/bundle/start-7925f28f.js">
+		<link rel="modulepreload" href="/bundle/chunks/vendor-31c8eaa5.js">
+		<link rel="modulepreload" href="/bundle/pages/__layout.svelte-7840959c.js">
+		<link rel="modulepreload" href="/bundle/pages/seller/__layout.svelte-a772f3ec.js">
+		<link rel="modulepreload" href="/bundle/pages/seller/bin-locations/index.svelte-4a49158c.js">
+		<link rel="stylesheet" href="/bundle/assets/start-464e9d0a.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/__layout.svelte-df7417d7.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/seller/__layout.svelte-210c3911.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/seller/bin-locations/index.svelte-02f665d3.css">
+
+		<script type="module">
+			import { start } from "/bundle/start-7925f28f.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/bundle/pages/__layout.svelte-7840959c.js"),
+						import("/bundle/pages/seller/__layout.svelte-a772f3ec.js"),
+						import("/bundle/pages/seller/bin-locations/index.svelte-4a49158c.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Fseller\u002Fbin-locations",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+
+
+<nav class="fixed bg-white flex h-min justify-between md:justify-start md:flex-col md:h-screen md:w-96 w-screen"><div class="flex justify-center items-center overflow-hidden"><a sveltekit:prefetch href="/" class="md:text-2xl font-semibold mx-4 md:p-6 md:mb-4">GREENCYCLING</a></div>
+
+    <div class="flex md:flex-col md:space-y-4"><a sveltekit:prefetch href="/seller" class="p-4 md:mx-6 md:rounded-md hover:bg-blue-200 svelte-1ven3eg">SUMMARY</a>
+        <a sveltekit:prefetch href="/seller/bin-locations" class="p-4 md:rounded-md md:mx-6 hover:bg-blue-200 svelte-1ven3eg active">BIN LOCATIONS</a><a sveltekit:prefetch href="/seller/exchange" class="p-4 md:rounded-md md:mx-6 hover:bg-blue-200 svelte-1ven3eg">EXCHANGE</a></div></nav>
+<div class="bg-gray-200 min-h-screen h-full md:ml-96 px-10 md:py-10 py-24"><h3 class="text-xl font-semibold"><select class="p-1 border-2 border-gray-300 bg-white rounded-md"><option value="nearest">Nearest bins</option><option value="recent">Recently connected bins</option><option value="all">All bins</option></select></h3>
+    <div class="bg-white rounded-2xl p-7 mt-10"><pre class="mt-4 mb-10 whitespace-pre-wrap">Distance: 5m
+Address: 520 NE. Edgemont Ave.
+    </pre>
+        <a sveltekit:prefetch href="/seller/bin-locations/connecting/" class="btn mr-10 svelte-4fa44n">Connect</a></div>
+
+<div class="bg-white rounded-2xl p-7 mt-10"><pre class="mt-4 mb-10 whitespace-pre-wrap">Distance: 120m
+Address: 605 Hillcrest St.</pre>
+    <div class="btn btn-disabled mr-10 svelte-4fa44n">Connect
+    </div>
+</div><div class="bg-white rounded-2xl p-7 mt-10"><pre class="mt-4 mb-10 whitespace-pre-wrap">Distance: 270m
+Address: 524 Cherry St.</pre>
+    <div class="btn btn-disabled mr-10 svelte-4fa44n">Connect
+    </div>
+</div><div class="bg-white rounded-2xl p-7 mt-10"><pre class="mt-4 mb-10 whitespace-pre-wrap">Distance: 557m
+Address: 2 Harvard St.</pre>
+    <div class="btn btn-disabled mr-10 svelte-4fa44n">Connect
+    </div>
+</div>
+</div>
+
+
+
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="A website for recycling and collecting scraps" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>RECYCLER | GREENCYCLING</title>
+
+		
+
+		<link rel="modulepreload" href="/bundle/start-7925f28f.js">
+		<link rel="modulepreload" href="/bundle/chunks/vendor-31c8eaa5.js">
+		<link rel="modulepreload" href="/bundle/pages/__layout.svelte-7840959c.js">
+		<link rel="modulepreload" href="/bundle/pages/seller/__layout.svelte-a772f3ec.js">
+		<link rel="modulepreload" href="/bundle/pages/seller/exchange.svelte-ec9f52a5.js">
+		<link rel="stylesheet" href="/bundle/assets/start-464e9d0a.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/__layout.svelte-df7417d7.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/seller/__layout.svelte-210c3911.css">
+		<link rel="stylesheet" href="/bundle/assets/pages/seller/exchange.svelte-3ab9e40d.css">
+
+		<script type="module">
+			import { start } from "/bundle/start-7925f28f.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/bundle/pages/__layout.svelte-7840959c.js"),
+						import("/bundle/pages/seller/__layout.svelte-a772f3ec.js"),
+						import("/bundle/pages/seller/exchange.svelte-ec9f52a5.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Fseller\u002Fexchange",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+
+
+<nav class="fixed bg-white flex h-min justify-between md:justify-start md:flex-col md:h-screen md:w-96 w-screen"><div class="flex justify-center items-center overflow-hidden"><a sveltekit:prefetch href="/" class="md:text-2xl font-semibold mx-4 md:p-6 md:mb-4">GREENCYCLING</a></div>
+
+    <div class="flex md:flex-col md:space-y-4"><a sveltekit:prefetch href="/seller" class="p-4 md:mx-6 md:rounded-md hover:bg-blue-200 svelte-1ven3eg">SUMMARY</a>
+        <a sveltekit:prefetch href="/seller/bin-locations" class="p-4 md:rounded-md md:mx-6 hover:bg-blue-200 svelte-1ven3eg">BIN LOCATIONS</a><a sveltekit:prefetch href="/seller/exchange" class="p-4 md:rounded-md md:mx-6 hover:bg-blue-200 svelte-1ven3eg active">EXCHANGE</a></div></nav>
+<div class="bg-gray-200 min-h-screen h-full md:ml-96 px-10 md:py-10 py-24"><div class="w-fit"><h1 class="w-fit mx-auto text-center p-7 bg-white rounded-lg text-6xl">124 Points</h1>
+    <div class="flex flex-wrap w-fit"><div class="flex-grow mx-10 mt-10 flex flex-col"><h1 class="mb-5 text-center font-semibold text-2xl">Donate</h1>
+            <div class="bg-white mx-auto md:mx-0 p-7 rounded-2xl flex-grow"><h2 class="text-center text-xl">0</h2>
+                <input type="range" min="0" max="124" class="w-full min-w-[20rem] mb-5" value="0">
+                <div><div class="flex flex-row justify-between items-center mt-5"><div>Red Cross</div>
+                            <a href="/seller" class="btn svelte-8cfigm btn-disabled">Donate</a>
+                        </div><div class="flex flex-row justify-between items-center mt-5"><div>Change Vietnam</div>
+                            <a href="/seller" class="btn svelte-8cfigm btn-disabled">Donate</a>
+                        </div><div class="flex flex-row justify-between items-center mt-5"><div>WWF</div>
+                            <a href="/seller" class="btn svelte-8cfigm btn-disabled">Donate</a>
+                        </div></div></div></div>
+
+        <div class="flex-grow mx-10 mt-10 flex flex-col"><h1 class="mb-5 text-center font-semibold text-2xl">Redeem</h1>
+            <div class="bg-white mx-auto md:mx-0 p-7 rounded-2xl flex-grow flex flex-col justify-between items-end"><div class="w-full"><h2 class="text-center text-xl">0</h2>
+                    <input type="range" min="0" max="124" class="w-full mb-10 min-w-[20rem]" value="0"></div>
+                <a href="/seller" class="btn float-right svelte-8cfigm btn-disabled">Ok</a></div></div></div>
+</div>
+</div>
+
+
+
+			
+		</div>
+	</body>
+</html>
