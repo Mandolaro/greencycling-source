@@ -12,23 +12,16 @@
 <div
     class="flex md:flex-col flex-row items-center bg-white rounded-xl p-8 auto md:w-64 md:h-56 md:mt-24 mt-4 flex-shrink-0 space-x-4 md:space-x-0"
 >
-    <div class="rounded-xl w-24 h-24 md:mx-auto p-7 bg-green-400 md:-mt-20">
+    <div on:click={() => (open = true)} class="rounded-xl w-24 h-24 md:mx-auto p-7 bg-green-400 hover:bg-green-600 md:-mt-20">
         <img
             src={`/img/icons/${icon}-solid.svg`}
             alt={`logo for ${message}`}
-            class=""
         />
     </div>
     <div
         class="flex md:flex-col items-center justify-between flex-grow md:flex-grow-0"
     >
-        <p
-            class="text-lg font-semibold md:mt-8 text-white p-2 rounded-md bg-green-600 hover:bg-green-800"
-            on:click={() => (open = true)}
-        >
-            view
-        </p>
-        <p class="text-lg font-medium md:mt-4">{message}</p>
+        <p class="text-2xl font-medium md:mt-12">{message}</p>
     </div>
 </div>
 

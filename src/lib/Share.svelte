@@ -1,5 +1,7 @@
 <script>
     let sharemenu = false;
+
+    let colors = ['blue-800', 'sky-400', 'purple-500', 'orange-600', 'lime-500']
 </script>
 
 <div
@@ -9,9 +11,14 @@
 >
     <div class="p-7 w-96 bg-white rounded-xl">
         <h3 class="text-center text-lg font-semibold">Share</h3>
-        {#each ['Facebook', 'Twitter', 'Instagram', 'Reddit', 'WhatsApp'] as page}
+        {#each ['Facebook', 'Twitter', 'Instagram', 'Reddit', 'WhatsApp'] as page, i}
         <div class="flex justify-between items-center mt-7">
-            <p class="mr">{page}</p>
+            <div class="flex items-center">
+            <div class={`overflow-hidden social-icon rounded-full w-12 h-12 md:mx-auto p-3 bg-${colors[i]}`}>
+                <img src={'/img/icons/social/' + page.toLowerCase() + '.svg'} alt={`${page} Icon`}>
+            </div>
+            <p class="ml-4">{page}</p>
+            </div>
             <div class="btn p-2 bg-blue-600 hover:bg-blue-800 rounded-md text-white">Share</div>
         </div>
         {/each}
@@ -33,3 +40,6 @@
         /></svg
     >
 </div>
+
+<!--Load the tailwind classes-->
+<div class="hidden bg-blue-800 bg-sky-400 bg-orange-600 bg-purple-500 bg-lime-500"></div>

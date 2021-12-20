@@ -1,12 +1,10 @@
 <script>
     import Share from "$lib/Share.svelte";
     import About from "$lib/About.svelte";
-
+    import {username} from "/src/routes/seller/store.js"
     let loggedin = false;
-
-    let username = "";
+    let yes = false;
     let password = "";
-
     let loginmenu = false;
 
     let newusername = "";
@@ -15,30 +13,28 @@
     let confirm = "";
     let signupmenu = false;
 
-    const passwords = {
+    let passwords = {
         john: "password",
     };
 
     function login() {
-        if (loginmenu && passwords[username] == password) loggedin = true;
+        if (loginmenu && passwords[$username] == password) loggedin = true;
         else alert("Wrong username or password");
-        username = "";
-        password = "";
         loginmenu = false;
     }
-
     function signup() {
         passwords[newusername] = newpassword;
         alert("created account successfully");
         newusername = "";
-        email = ""
+        email = "";
         newpassword = "";
-        confirm = ""
+        confirm = "";
         signupmenu = false;
     }
 </script>
 
 <svelte:head>
+
     <title>Welcome to GREENCYCLING</title>
 </svelte:head>
 
@@ -67,7 +63,7 @@
             </div>
         {:else}
             <div class="flex items-center space-x-10">
-                <p>Hello, <strong>John</strong></p>
+                <p>Hello, <strong> {$username} </strong></p>
                 <a href="/seller" class="btn btn-pink">Profile</a>
             </div>
         {/if}
@@ -116,7 +112,7 @@
                     required
                     id="username-inp"
                     class="border-gray-300 p-2 border-2 rounded-md"
-                    bind:value={username}
+                    bind:value={$username}
                 />
             </div>
             <div class="flex items-center justify-between mb-7 space-x-7">
@@ -178,7 +174,14 @@
                     bind:value={confirm}
                 />
             </div>
-            <button type="submit" class="btn float-right">Login</button>
+            <div class="flex items-center justify-between mb-7 space-x-7">
+                <label>
+                    <input type=checkbox bind:checked={yes}>
+                    I accept the terms and conditions
+                </label>
+            </div>
+            
+            <button disabled={!yes} type="submit" class="btn float-right">Login</button>
         </form>
     </div>
 </div>
