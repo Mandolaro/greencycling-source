@@ -1,12 +1,14 @@
 <script>
     import Share from "$lib/Share.svelte";
     import About from "$lib/About.svelte";
-    import {username} from "/src/routes/seller/store.js"
+    import {username, isLogin} from "/src/routes/seller/store.js"
     let loggedin = false;
     let yes = false;
     let password = "";
     let loginmenu = false;
-
+    isLogin.subscribe(value => {
+		loggedin = value;
+	});
     let newusername = "";
     let email = "";
     let newpassword = "";
@@ -18,7 +20,11 @@
     };
 
     function login() {
-        if (loginmenu && passwords[$username] == password) loggedin = true;
+        if (loginmenu && passwords[$username] == password)
+        {
+            loggedin = true;
+            isLogin.set(true);
+        } 
         else alert("Wrong username or password");
         loginmenu = false;
     }
@@ -88,7 +94,8 @@
                     class:hidden={loggedin}
                 >
                     <a class="btn" href="#about">About us</a>
-                    <div class="btn btn-pink" on:click={login}>Get started</div>
+                    
+                    <div class="btn btn-pink" on:click={() => (loginmenu = true)}>Get started</div>
                 </div>
             </div>
         </div>
@@ -124,8 +131,12 @@
                     bind:value={password}
                 />
             </div>
+            <div class=" text text-right font-semibold mb-5"><u>Forgot you password</u></div>
+            <div class="flex items-center justify-between mb-7 space-x-7" on:click={() => {signupmenu = true; loginmenu = false}}><u>Don't have an account? Click here</u></div>
             <button type="submit" class="btn float-right">Login</button>
+           
         </form>
+        
     </div>
 </div>
 

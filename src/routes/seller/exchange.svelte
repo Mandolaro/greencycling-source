@@ -1,6 +1,6 @@
 <script>
     import {point} from "/src/routes/seller/store.js"
-    let orgs = ["Red Cross", "Change Vietnam", "WWF"];
+    let orgs = ["Red Cross", "Change Vietnam", "WWF", "Oxfam", "Unicef","A", "V", "B", "C", "D"];
     let coupons = ["Tiki", "Shopee", "KFC"]
     let val = 0;
     let valredeem = 0;
@@ -26,9 +26,10 @@
     <h1 class="w-fit mx-auto text-center p-7 bg-white rounded-lg text-6xl">{globalval} Points</h1>
     <h1 class="text-2xl font-bold mt-10"> <u><a href="https://www.google.com"> How does the exchange system work? </a></u></h1>
     <div class="flex flex-wrap w-fit">
-        <div class="flex-grow mx-10 mt-10 flex flex-col">
+        <div class="flex-grow mx-10 mt-10">
             <h1 class="mb-5 text-center font-semibold text-2xl bg-white rounded-lg text-4xl">Donate</h1>
-            <div class="bg-white mx-auto md:mx-0 p-7 rounded-2xl flex-grow">
+            
+            <div class="bg-white md:mx-0 p-7 rounded-2xl">
                 <h2 class="text-center text-xl">{val}</h2>
                 <input
                     type="range"
@@ -37,7 +38,8 @@
                     bind:value={val}
                     class="w-full min-w-[20rem] mb-5"
                 />
-                <div>
+                
+                <div class = "overflow-auto scroll">
                     {#each orgs as org}
                         <div
                             class="flex flex-row justify-between items-center mt-5 "
