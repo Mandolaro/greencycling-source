@@ -1,2 +1,2 @@
-# greencycling
-A service to incentivize recycling in Vietnam
+# Greencycling
+The demo website for Greencycling. Made for the Conrad Challenge.
