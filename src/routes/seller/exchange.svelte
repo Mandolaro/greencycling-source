@@ -1,24 +1,32 @@
 <script>
     import {point} from "/src/routes/seller/store.js"
-    let orgs = ["Red Cross", "Change Vietnam", "WWF", "Oxfam", "Unicef","A", "V", "B", "C", "D"];
-    let coupons = ["Tiki", "Shopee", "KFC"]
+    let orgs = ["Red Cross", "Change Vietnam", "WWF", "Oxfam", "Unicef", "V", "B", "C", "D"];
+    let coupons = ["Tiki", "Shopee", "KFC","A", "V", "B", "C", "D"]
     let val = 0;
     let valredeem = 0;
-    let globalval = 110;
+    let globalval = 0;
     point.subscribe(value => {
 		globalval = value;
 	});
     function donate(org) {
         
         return () =>
+        {
+            $point -= val;
             val &&
             alert(`You donated $${val / 10} to ${org} with ${val} point`);
+        }
+           
     }
 
     function redeem(org) {
         return () =>
+        {
+            $point -= val;
             valredeem &&
             alert(`You redeemed a $${valredeem / 10} ${org} coupon with ${valredeem} point`);
+        }
+            
     }
 </script>
 
@@ -29,7 +37,7 @@
         <div class="flex-grow mx-10 mt-10">
             <h1 class="mb-5 text-center font-semibold text-2xl bg-white  text-4xl">Donate</h1>
             
-            <div class="bg-white md:mx-0 p-7 rounded-2xl">
+            <div class="bg-white md:mx-0 p-7 rounded-2xl flex-grow flex flex-col justify-between">
                 <h2 class="text-center text-xl">{val}</h2>
                 <input
                     type="range"
@@ -39,14 +47,14 @@
                     class="w-full min-w-[20rem] mb-5"
                 />
                 
-                <div class = "overflow-auto scroll">
+                <div>
                     {#each orgs as org}
                         <div
                             class="flex flex-row justify-between items-center mt-5 "
                         >
                             <div>{org}</div>
                             <a
-                                href="/seller"
+                                href="/seller/exchange"
                                 class="btn"
                                 class:btn-disabled={val == 0}
                                 on:click={donate(org)}>Donate</a
@@ -67,7 +75,7 @@
                         min="0"
                         max={globalval}
                         bind:value={valredeem}
-                        class="w-full mb-10 min-w-[20rem]"
+                        class="w-full mb-5 min-w-[20rem]"
                     />
                 </div>
                 <div>
@@ -77,7 +85,7 @@
                         >
                             <div>{org} Coupon</div>
                             <a
-                                href="/seller"
+                                href="/seller/exchange"
                                 class="btn"
                                 class:btn-disabled={valredeem == 0}
                                 on:click={redeem(org)}>Redeem</a

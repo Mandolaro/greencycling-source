@@ -36,7 +36,7 @@
   div.recent
   {
     position: absolute;
-    top: 70px;
+    top: 75px;
     right: 0px;
     width: 200px;
     height: 100px;
