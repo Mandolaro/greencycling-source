@@ -83,7 +83,7 @@
                         min="0"
                         max={globalval}
                         bind:value={valredeem}
-                        class="w-full mb-5 min-w-[20rem]"
+                        class="w-full mb-5 min-w-[20rem] "
                     />
                 </div>
                 <div>

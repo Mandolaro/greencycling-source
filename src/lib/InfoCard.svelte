@@ -12,7 +12,7 @@
 </script>
 
 <div
-    class="flex md:flex-col flex-row items-center bg-white rounded-xl p-8 auto md:w-64 md:h-56 md:mt-24 mt-4 flex-shrink-0 space-x-4 md:space-x-0"
+    class="flex md:flex-col flex-row items-center bg-white rounded-xl p-8 auto md:w-64 md:h-56 md:mt-16 mt-4 flex-shrink-0 space-x-4 md:space-x-0"
 >
     <div on:click={() => (open = true)} class="rounded-xl w-24 h-24 md:mx-auto p-7 bg-{colors[selected]} hover:bg-{colors_hover[(selected+1)%5]} md:-mt-20">
         <img

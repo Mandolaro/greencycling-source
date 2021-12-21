@@ -21,24 +21,22 @@
             height="96"
         />
 </div>
-
-
-
 </div>
 <h1 class="text-2xl font-bold mt-10">Your account summary</h1>
+<div class="flex md:flex-row flex-col justify-center md:space-x-10 overflow-auto scroll mt-6">
+    <div class="text-center inline-block p-4 w-40 rounded-md bg-green-600 hover:bg-green-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "0")}>Today</div>
+    <div class="text-center inline-block p-4 w-40 rounded-md bg-green-600 hover:bg-green-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "1")}>This Week</div>
+    <div class="text-center inline-block p-4 w-40 rounded-md bg-green-600 hover:bg-green-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "2")}>This Month</div>
+    <div class="text-center inline-block p-4 w-40 rounded-md bg-green-600 hover:bg-green-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "3")}>This year</div>
+    <div class="text-center inline-block p-4 w-40 rounded-md bg-green-600 hover:bg-green-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "4")}>All time</div>
+</div>
 <div class="flex md:flex-row flex-col md:space-x-10 overflow-auto scroll">
     <InfoCard data={["0", "12", "60", "96", "124"]} icon="award" message="Points" class="bg-red-400" selected = {date}/>
-    <InfoCard data={["0 KG", "4 KG", " 24 KG", "44 KG", "66 KG"]} icon="Trash" message="Recycled" selected = {date}/>
+    <InfoCard data={["0 KG", "4 KG", " 24 KG", "44 KG", "66 KG"]} icon="trash" message="Recycled" selected = {date}/>
     <InfoCard data={["$0", "$5", "$5", "$7", "$12"]} icon="redeem" message="Redeemed" selected = {date}/>
     <InfoCard data={["$0", "$10", "$25", "$29", "$29"]} icon="heart" message="Donated" selected = {date}/>
 </div>
-<div class="flex md:flex-row flex-col md:space-x-10 overflow-auto scroll">
-    <div class="text-center inline-block p-4 w-40 rounded-md bg-cyan-600 hover:bg-cyan-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "0")}>Today</div>
-    <div class="text-center inline-block p-4 w-40 rounded-md bg-cyan-600 hover:bg-cyan-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "1")}>This Week</div>
-    <div class="text-center inline-block p-4 w-40 rounded-md bg-cyan-600 hover:bg-cyan-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "2")}>This Month</div>
-    <div class="text-center inline-block p-4 w-40 rounded-md bg-cyan-600 hover:bg-cyan-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "3")}>This year</div>
-    <div class="text-center inline-block p-4 w-40 rounded-md bg-cyan-600 hover:bg-cyan-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "4")}>All time</div>
-</div>
+
 <h1 class="text-2xl font-bold mt-10"> Recycling History</h1>
 
 <Graph/>

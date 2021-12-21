@@ -11,7 +11,7 @@ Distance: 5m
 Address: 520 NE. Edgemont Ave.Clemmons, NC 27012
     </pre>
     <a sveltekit:prefetch href="/seller/bin-locations" class="btn-red btn mr-10 mt-5">Disconnect</a>
-    <button class="btn-blue btn mt-5" on:click={() => {
+    <button class="btn-green btn mt-5" on:click={() => {
         successful = 0 | 2 * Math.random()
         amount = 0 | 20 * Math.random()
         done = true;
@@ -107,5 +107,8 @@ Address: 520 NE. Edgemont Ave.Clemmons, NC 27012
     }
     .btn-blue {
         @apply bg-blue-600 hover:bg-blue-800;
+    }
+    .btn-green {
+        @apply bg-green-600 hover:bg-green-800;
     }
 </style>
