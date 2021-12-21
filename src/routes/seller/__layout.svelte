@@ -2,7 +2,8 @@
     import {username} from "/src/routes/seller/store.js"
     import {page} from '$app/stores';
     import Box from '$lib/Box.svelte';
-    const hrefs = ['bin-locations', 'exchange', 'bin-navigation'];
+    const hrefs = [ 'exchange', 'bin-navigation'];
+    const sub = ['/bin-all','/bin-near','/bin-recent','/connected','/connecting',''];
     let username_now;
     username.subscribe(value => {
 		username_now = value;
@@ -23,12 +24,20 @@
         height="96"
         class = "circular_image"
         />
-        <a sveltekit:prefetch href="/" class="md:text-2xl font-semibold mx-4 md:p-6 md:mb-4">GREENCYCLING</a>
+        <a sveltekit:prefetch href="/" class="md:text-2xl font-semibold mx-4 md:p-6 md:mb-2">GREENCYCLING</a>
     </div>
 
     <div class="flex md:flex-col md:space-y-4">
         <a sveltekit:prefetch href="/" class="p-4 md:mx-6 md:rounded-md hover:bg-green-400">HOME</a>
         <a sveltekit:prefetch href='/seller' class="p-4 md:mx-6 md:rounded-md hover:bg-green-400" class:active={$page.path == '/seller'}>SUMMARY</a>
+        <a sveltekit:prefetch href={'/seller/bin-locations'} class="p-4 md:rounded-md md:mx-6 hover:bg-green-400" class:active={
+             $page.path == '/seller/bin-locations' 
+             || $page.path == '/seller/bin-locations/bin-all' 
+             || $page.path == '/seller/bin-locations/bin-near'
+             || $page.path == '/seller/bin-locations/bin-recent'
+             || $page.path == '/seller/bin-locations/connected'
+             || $page.path == '/seller/bin-locations/connecting'
+            }>{'BIN LOCATIONS'}</a>
         {#each hrefs as href}
             <a sveltekit:prefetch href={'/seller/' + href} class="p-4 md:rounded-md md:mx-6 hover:bg-green-400" class:active={
             $page.path == '/seller/' + href

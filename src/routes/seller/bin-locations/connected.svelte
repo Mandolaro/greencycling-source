@@ -105,9 +105,6 @@ Address: 520 NE. Edgemont Ave.Clemmons, NC 27012
     .btn-red {
         @apply bg-red-600 hover:bg-red-800;
     }
-    .btn-blue {
-        @apply bg-blue-600 hover:bg-blue-800;
-    }
     .btn-green {
         @apply bg-green-600 hover:bg-green-800;
     }
