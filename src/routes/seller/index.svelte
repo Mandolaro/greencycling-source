@@ -12,8 +12,8 @@
 </script>
 <div>
 <div class="flex md:flex-row flex-col md:space-x-10 overflow-auto scroll">
-    <h1 class="w-fit text-2xl font-bold mt-10 p-7 bg-white rounded-lg text-6xl">Welcome back, {username_now} </h1>
-    <div class="p-7 w-fit bg-white rounded-2xl mx-auto flex flex-col mt-10">
+    <h1 class="w-fit text-2xl font-bold mt-10 p-7 bg-white text-6xl">Welcome back, {username_now} </h1>
+    <div class="p-7 w-fit bg-white mx-auto flex flex-col mt-10">
         <img
             src="/img/qr_img.png"
             alt="QR code to connect"

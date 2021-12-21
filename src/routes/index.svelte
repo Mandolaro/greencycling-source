@@ -14,7 +14,7 @@
     let newpassword = "";
     let confirm = "";
     let signupmenu = false;
-
+    let forgetmenu = false;
     let passwords = {
         john: "password",
     };
@@ -36,6 +36,13 @@
         newpassword = "";
         confirm = "";
         signupmenu = false;
+    }
+    function forget() {
+        passwords[newusername] = password;
+        alert("Reset password successfully");
+        newusername = "";
+        password = "";
+        forgetmenu = false;
     }
 </script>
 
@@ -131,9 +138,41 @@
                     bind:value={password}
                 />
             </div>
-            <div class=" text text-right font-semibold mb-5"><u>Forgot your password</u></div>
+            <div class=" text text-right font-semibold mb-5" on:click={() => {forgetmenu = true; loginmenu = false}}><u>Forgot your password</u></div>
             <div class="flex items-center justify-between mb-7 space-x-7" on:click={() => {signupmenu = true; loginmenu = false}}><u>Don't have an account? Click here</u></div>
             <button type="submit" class="btn float-right">Login</button>
+           
+        </form>
+        
+    </div>
+</div>
+<div
+    class:hidden={!forgetmenu}
+    class="fixed inset-0 bg-black bg-opacity-90 z-20 flex justify-center items-center"
+>
+    <div class="absolute inset-0" on:click={() => forgetmenu = false}></div>
+    <div class="p-7 bg-white rounded-xl z-30">
+        <h3 class="text-lg text-center font-semibold mb-7">Reset your password</h3>
+        <form on:submit|preventDefault={forget}>
+            <div class="flex items-center justify-between mb-7 space-x-7">
+                <label for="username-inp">Username</label><input
+                    type="text"
+                    required
+                    id="username-inp"
+                    class="border-gray-300 p-2 border-2 rounded-md"
+                    bind:value={newusername}
+                />
+            </div>
+            <div class="flex items-center justify-between mb-7 space-x-7">
+                <label for="password-inp">New password</label><input
+                    type="password"
+                    required
+                    id="password-inp"
+                    class="border-gray-300 p-2 border-2 rounded-md"
+                    bind:value={password}
+                />
+            </div>
+            <button type="submit" class="btn float-right">Reset</button>
            
         </form>
         

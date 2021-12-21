@@ -1,5 +1,2 @@
-<div class="h-screen flex">
-    <div class="m-auto text-4xl">
-        Work in progress...
-    </div>
-</div>
+<iframe src="/static/poster.pdf" width="100%" height="700px" title="Bin Navigation"  frameborder="0">
+</iframe>
