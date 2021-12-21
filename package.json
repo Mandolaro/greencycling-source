@@ -6,7 +6,8 @@
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
-    "pack": "tar --exclude='./node_modules' -czvf ../greencycling.tar.gz ."
+    "pack": "tar --exclude='./node_modules' -czvf ../greencycling.tar.gz .",
+    "deploy": "npm run build && npx gh-pages -d build"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
