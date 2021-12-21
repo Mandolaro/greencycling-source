@@ -5,6 +5,7 @@
     export let icon;
     export let message;
     let colors = ['blue-800', 'sky-400', 'purple-500', 'orange-600', 'lime-500']
+    let date = ['Today', 'This week', 'This month', 'This year', 'All time']
     let open = false;
     export let selected = "0";
 </script>
@@ -36,16 +37,7 @@
     <div class="bg-white z-20 p-7 w-5/12 rounded-xl">
         <h3 class="font-xl font-bold">{message}</h3>
         <div class="flex space-x-3 mt-3 items-center">
-            <select
-                bind:value={selected}
-                class="p-2 rounded-md bg-white border-2 border-gray-300"
-            >
-                <option value="0">Today</option>
-                <option value="1">This week</option>
-                <option value="2">This month</option>
-                <option value="3">This year</option>
-                <option value="4">All time</option>
-            </select>
+            <h1>{date[selected]}</h1>
             <div>{data[selected]}</div>
         </div>
         <Graph />

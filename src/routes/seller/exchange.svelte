@@ -22,7 +22,7 @@
     function redeem(org) {
         return () =>
         {
-            $point -= val;
+            $point -= valredeem;
             valredeem &&
             alert(`You redeemed a $${valredeem / 10} ${org} coupon with ${valredeem} point`);
         }
