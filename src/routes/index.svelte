@@ -131,7 +131,7 @@
                     bind:value={password}
                 />
             </div>
-            <div class=" text text-right font-semibold mb-5"><u>Forgot you password</u></div>
+            <div class=" text text-right font-semibold mb-5"><u>Forgot your password</u></div>
             <div class="flex items-center justify-between mb-7 space-x-7" on:click={() => {signupmenu = true; loginmenu = false}}><u>Don't have an account? Click here</u></div>
             <button type="submit" class="btn float-right">Login</button>
            

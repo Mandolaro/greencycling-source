@@ -23,11 +23,11 @@
 </script>
 
 <div class="w-fit">
-    <h1 class="w-fit mx-auto text-center p-7 bg-white rounded-lg text-6xl">{globalval} Points</h1>
-    <h1 class="text-2xl font-bold mt-10"> <u><a href="https://www.google.com"> How does the exchange system work? </a></u></h1>
+    <h1 class="w-fit mx-auto text-center p-7 bg-white  text-6xl">{globalval} Points</h1>
+    <h1 class="text-2xl font-bold mt-10"> <u><a href="/seller/exchange-help/"> How does the exchange system work? </a></u></h1>
     <div class="flex flex-wrap w-fit">
         <div class="flex-grow mx-10 mt-10">
-            <h1 class="mb-5 text-center font-semibold text-2xl bg-white rounded-lg text-4xl">Donate</h1>
+            <h1 class="mb-5 text-center font-semibold text-2xl bg-white  text-4xl">Donate</h1>
             
             <div class="bg-white md:mx-0 p-7 rounded-2xl">
                 <h2 class="text-center text-xl">{val}</h2>
@@ -58,7 +58,7 @@
         </div>
 
         <div class="flex-grow mx-10 mt-10 flex flex-col">
-            <h1 class="mb-5 text-center font-semibold text-2xl bg-white rounded-lg text-4xl">Redeem</h1>
+            <h1 class="mb-5 text-center font-semibold text-2xl bg-white  text-4xl">Redeem</h1>
             <div class="bg-white mx-auto md:mx-0 p-7 rounded-2xl flex-grow flex flex-col justify-between">
                 <div class="w-full">
                     <h2 class="text-center text-xl">{valredeem}</h2>
