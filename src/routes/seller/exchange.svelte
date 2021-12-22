@@ -14,8 +14,9 @@
         {
             $point -= val;
             val &&
-            alert(`You donated $${val / 10} to ${org} with ${val} point`);
+            alert(`You donated ${val  * 10} VND to ${org} with ${val} point`);
             if(val) val = 0;
+            if(valredeem) valredeem = 0;
         }
            
     }
@@ -25,8 +26,9 @@
         {
             $point -= valredeem;
             valredeem &&
-            alert(`You redeemed a $${valredeem / 10} ${org} coupon with ${valredeem} point`);
+            alert(`You redeemed a ${valredeem * 10} VND ${org} coupon with ${valredeem} point`);
             if(valredeem) valredeem = 0;
+            if(val) val = 0;
         }
             
     }
@@ -86,6 +88,27 @@
                         class="w-full mb-5 min-w-[20rem] "
                     />
                 </div>
+                <div class="flex flex-row justify-between items-center mt-5">
+                    <div>Cash</div>
+                <a
+                    href="/seller/exchange"
+                    class="btn"
+                    class:btn-disabled={valredeem == 0}
+                    on:click={() =>
+                    {
+                        $point -= valredeem;
+                        valredeem &&
+                        alert(
+                            `You redeemed ${valredeem} points for ${
+                                valredeem * 9
+                            } VND`
+                        );
+                        if(valredeem) valredeem = 0;
+                        if(val) val = 0;
+                    }
+                      }>Redeem</a
+                >
+                </div>
                 <div>
                     {#each coupons as org}
                         <div
@@ -101,21 +124,7 @@
                         </div>
                     {/each}
                 </div>
-                <div class="flex flex-row justify-between items-center mt-5">
-                    <div>Cash</div>
-                <a
-                    href="/seller"
-                    class="btn"
-                    class:btn-disabled={valredeem == 0}
-                    on:click={() =>
-                        valredeem &&
-                        alert(
-                            `You redeemed ${valredeem} points for $${
-                                valredeem / 10
-                            }`
-                        )}>Redeem</a
-                >
-                    </div>
+                
                 </div>
             </div>
         </div>

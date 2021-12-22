@@ -74,9 +74,9 @@ Address: 520 NE. Edgemont Ave.Clemmons, NC 27012
         <div class="mt-2 px-7 py-3">
             <p class="text-sm text-center text-gray-500">
                 {#if successful}
-                    You sold your scrap for {0 | (20 * Math.random())} points
+                    You sold your bottles for {0 | (20 * Math.random())} points
                 {:else}
-                    Your scrap is contaminated
+                    Your bottle is contaminated
                 {/if}
             </p>
         </div>
