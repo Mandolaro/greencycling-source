@@ -31,7 +31,7 @@
     <div class="text-center inline-block p-4 w-40 rounded-md bg-green-600 hover:bg-green-800 text-white shadow-cyan-600 hover:shadow-cyan-800" on:click={() => (date = "4")}>All time</div>
 </div>
 <div class="flex md:flex-row flex-col md:space-x-10 overflow-auto scroll">
-    <InfoCard data={["0", "500", "1000", "4000", "20000"]} icon="award" message="Points" class="bg-red-400" selected = {date}/>
+    <InfoCard data={["0", "500", "1,000", "4,000", "20,000"]} icon="award" message="Points" class="bg-red-400" selected = {date}/>
     <InfoCard data={["0 KG", "4 KG", " 10 KG", "30 KG", "50 KG"]} icon="trash" message="Recycled" selected = {date}/>
     <InfoCard data={["0 VND", "50,000 VND", "50,000 VND", "70,000 VND", "120,000 VND"]} icon="redeem" message="Redeemed" selected = {date}/>
     <InfoCard data={["0 VND", "50,000 VND", "100,000 VND", "300,000 VND", "500,000 VND"]} icon="heart" message="Donated" selected = {date}/>
