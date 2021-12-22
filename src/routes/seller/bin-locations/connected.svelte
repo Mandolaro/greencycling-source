@@ -13,7 +13,7 @@ Address: 520 NE. Edgemont Ave.Clemmons, NC 27012
     <a sveltekit:prefetch href="/seller/bin-locations" class="btn-red btn mr-10 mt-5">Disconnect</a>
     <button class="btn-green btn mt-5" on:click={() => {
         successful = 0 | 2 * Math.random()
-        amount = 0 | 20 * Math.random()
+        amount = 0 | 50 * Math.random()
         done = true;
     }}
         >Deposit</button
@@ -74,7 +74,7 @@ Address: 520 NE. Edgemont Ave.Clemmons, NC 27012
         <div class="mt-2 px-7 py-3">
             <p class="text-sm text-center text-gray-500">
                 {#if successful}
-                    You sold your bottles for {0 | (20 * Math.random())} points
+                    You sold your bottles for {0 | (50 * Math.random())} points
                 {:else}
                     Your bottle is contaminated
                 {/if}
