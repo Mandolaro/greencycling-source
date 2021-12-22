@@ -18,7 +18,7 @@
         {
             $point -= val;
             val &&
-            alert(`You donated ${convert(val  * 10)} VND to ${org} with ${val} point`);
+            alert(`You donated ${convert(val  * 10)} VND to ${org} with ${convert(val)} point`);
             if(val) val = 0;
             if(valredeem) valredeem = 0;
         }
@@ -30,7 +30,7 @@
         {
             $point -= valredeem;
             valredeem &&
-            alert(`You redeemed a ${convert(valredeem * 10)} VND ${org} coupon with ${valredeem} point`);
+            alert(`You redeemed a ${convert(valredeem * 10)} VND ${org} coupon with ${convert(valredeem)} point`);
             if(valredeem) valredeem = 0;
             if(val) val = 0;
         }
@@ -39,7 +39,7 @@
 </script>
 
 <div class="w-fit">
-    <h1 class="w-fit mx-auto text-center p-7 bg-white  text-6xl">{globalval} Points</h1>
+    <h1 class="w-fit mx-auto text-center p-7 bg-white  text-6xl">{convert(globalval)} Points</h1>
     <h1 class="text-2xl font-bold mt-10"> <u><a href="/seller/exchange-help/"> How does the exchange system work? </a></u></h1>
     
     <div class="flex flex-wrap w-fit">
@@ -50,7 +50,7 @@
                 
                 
                 <div class="bg-white md:mx-0 p-7 justify-between">
-                    <h2 class="text-center text-xl">{val}</h2>
+                    <h2 class="text-center text-xl">{convert(val)}</h2>
                     <input
                         type="range"
                         min="0"
@@ -83,7 +83,7 @@
             
             <div class="bg-white mx-auto md:mx-0 p-7 flex-grow flex flex-col justify-between">
                 <div class="w-full">
-                    <h2 class="text-center text-xl">{valredeem}</h2>
+                    <h2 class="text-center text-xl">{convert(valredeem)}</h2>
                     <input
                         type="range"
                         min="0"
@@ -103,7 +103,7 @@
                         $point -= valredeem;
                         valredeem &&
                         alert(
-                            `You redeemed ${valredeem} points for ${
+                            `You redeemed ${convert(valredeem)} points for ${
                                 convert(valredeem * 9)
                             } VND`
                         );
