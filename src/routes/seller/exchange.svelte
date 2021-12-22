@@ -8,13 +8,17 @@
     point.subscribe(value => {
 		globalval = value;
 	});
+    function convert(x)
+    {
+       return x.toLocaleString()
+    }
     function donate(org) {
         
         return () =>
         {
             $point -= val;
             val &&
-            alert(`You donated ${val  * 10} VND to ${org} with ${val} point`);
+            alert(`You donated ${convert(val  * 10)} VND to ${org} with ${val} point`);
             if(val) val = 0;
             if(valredeem) valredeem = 0;
         }
@@ -26,7 +30,7 @@
         {
             $point -= valredeem;
             valredeem &&
-            alert(`You redeemed a ${valredeem * 10} VND ${org} coupon with ${valredeem} point`);
+            alert(`You redeemed a ${convert(valredeem * 10)} VND ${org} coupon with ${valredeem} point`);
             if(valredeem) valredeem = 0;
             if(val) val = 0;
         }
@@ -100,7 +104,7 @@
                         valredeem &&
                         alert(
                             `You redeemed ${valredeem} points for ${
-                                valredeem * 9
+                                convert(valredeem * 9)
                             } VND`
                         );
                         if(valredeem) valredeem = 0;
