@@ -27,10 +27,12 @@
             href="https://www.google.com/maps/dir/10.780672,106.708992/Landmark+81,+%C4%90%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+H%E1%BB%AFu+C%E1%BA%A3nh,+Vinhomes+Central+Park,+Ph%C6%B0%E1%BB%9Dng+22,+B%C3%ACnh+Th%E1%BA%A1nh,+Ho+Chi+Minh+City/@10.7872371,106.7081508,14.84z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x317527c2f8f30911:0x36ac5073f8c91acd!2m2!1d106.7218689!2d10.7949999"
             on:click={Show}>Locate</button
         >
+        <a href="/seller/bin-locations/connected">
         <button
             class="p-3 bg-green-600 hover:bg-green-800 text-white font-bold rounded-md"
-            ><a href="/seller/bin-locations/connected">Deposit</a></button
+            > Deposit</button
         >
+        </a>
     </div>
 </div>
 
