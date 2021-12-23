@@ -2,6 +2,13 @@
     let sharemenu = false;
 
     let colors = ['blue-800', 'sky-400', 'purple-500', 'orange-600', 'lime-500']
+    let link = {
+        'Facebook': 'https://www.facebook.com/',
+        'Twitter' : 'https://twitter.com/',
+        'Instagram': 'https://www.instagram.com/',
+        'Reddit': 'https://www.reddit.com/',
+        'Whatsapp': 'https://www.whatsapp.com/'
+    };
 </script>
 
 <div
@@ -19,7 +26,7 @@
             </div>
             <p class="ml-4">{page}</p>
             </div>
-            <div class="btn p-2 bg-blue-600 hover:bg-blue-800 rounded-md text-white">Share</div>
+            <a href = {link[page]}><div class="btn p-2 bg-blue-600 hover:bg-blue-800 rounded-md text-white"> Share</div></a>
         </div>
         {/each}
     </div>
